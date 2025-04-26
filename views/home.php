@@ -15,7 +15,7 @@
                 <div class=" card">
                     <div class="card-header">
                         <h4>Lista de Usuários
-                            <a href="createuser.php" class="btn btn-primary float-end"> Adicionar Usuários </a>
+                            <a href="create" class="btn btn-primary float-end"> Adicionar Usuários </a>
                         </h4>
                         <div class="card-body">
                             <table class=" table table-bordered table-striped">
