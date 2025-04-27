@@ -2,7 +2,6 @@
 require_once("../config/database.php");
 require_once("../vendor/autoload.php");
 require_once("../app/Router.php");
-require_once("../app/Views.php");
 
 // Instancie o Router 
 $router = new Router(); 
