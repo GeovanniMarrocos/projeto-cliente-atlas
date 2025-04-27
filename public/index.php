@@ -27,3 +27,4 @@ if (file_exists($viewFile)) {
 } else {
     require_once '../views/error404.php';
 }
+require_once '../templates/footer.php';
