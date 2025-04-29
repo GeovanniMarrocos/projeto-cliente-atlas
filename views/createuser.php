@@ -11,22 +11,22 @@
                     <form action="" method="POST">
                         <div class="mb-3">
                             <label>Nome</label>
-                            <input class="form-control"type="text" name="nome" placeholder="Digite o nome do novo Usuário" required>
+                            <input class="form-control"type="text" name="nome" required>
                         </div>
                         <div class="mb-3">
                             <label>Email</label>
-                            <input class="form-control"type="text" name="email" placeholder="Digite o nome do novo Usuário" required>
+                            <input class="form-control"type="text" name="email" required>
                         </div>
                         <div class="mb-3">
                             <label>Data de Nascimento</label>
-                            <input class="form-control"type="date" name="data_nascimento" placeholder="Digite o nome do novo Usuário" required>
+                            <input class="form-control"type="date" name="data_nascimento" required>
                         </div>
                         <div class="mb-3">
                             <label>Senha</label>
-                            <input class="form-control" type="password" name="nome" placeholder="Digite o nome do novo Usuário" required>
+                            <input class="form-control" type="password" name="nome" required>
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-primary" type="submit" name="createuser">Enviar</button>
+                            <button class="btn btn-primary" type="submit" name="createuser">Salvar</button>
                         </div>
                     </form>
                 </div>
