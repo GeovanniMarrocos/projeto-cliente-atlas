@@ -8,7 +8,7 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="" method="POST">
+                    <form action="action.php" method="POST">
                         <div class="mb-3">
                             <label>Nome</label>
                             <input class="form-control"type="text" name="nome" required>
@@ -23,7 +23,7 @@
                         </div>
                         <div class="mb-3">
                             <label>Senha</label>
-                            <input class="form-control" type="password" name="nome" required>
+                            <input class="form-control" type="password" name="senha" required>
                         </div>
                         <div class="mb-3">
                             <button class="btn btn-primary" type="submit" name="createuser">Salvar</button>
