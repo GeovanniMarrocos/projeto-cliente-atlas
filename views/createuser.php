@@ -8,7 +8,7 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="../views/action.php" method="POST">
+                    <form action="action.php" method="POST">
                         <div class="mb-3">
                             <label>Nome</label>
                             <input class="form-control"type="text" name="nome" required>
