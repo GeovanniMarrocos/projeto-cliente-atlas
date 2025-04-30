@@ -1,15 +1,18 @@
 <?php
 
-class Router {
+class Router 
+{
     private $routes = [
         '' => 'home',
         '/' => 'home',
+        '/index.php' => 'home',
         '/home' => 'home',
         '/create' => 'create',
         // outras rotas
     ];
 
-    public function getCurrentRoute() {
+    public function getCurrentRoute() 
+    {
         
 
         $uri = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
@@ -20,10 +23,12 @@ class Router {
         return $this->routes[$uri] ?? '404';
     }
 
-    public function dispatch() {
+    public function dispatch() 
+    {
         $route = $this->getCurrentRoute();
         
-        switch ($route) {
+        switch ($route) 
+        {
             case 'home':
                 require_once '../templates/navbar.php';
                 require_once '../views/home.php';

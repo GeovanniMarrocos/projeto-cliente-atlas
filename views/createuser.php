@@ -18,6 +18,7 @@
                             <input class="form-control"type="text" name="email" required>
                         </div>
                         <div class="mb-3">
+                        <?php include_once("../public/message.php")?>
                             <label>Data de Nascimento</label>
                             <input class="form-control"type="date" name="data_nascimento" required>
                         </div>

@@ -23,9 +23,12 @@ $viewFile = match($route) {
 // Renderizar a página
 require_once '../templates/navbar.php';
 
-if (file_exists($viewFile)) {
+if (file_exists($viewFile)) 
+{
     require_once $viewFile;
-} else {
+} 
+else 
+{
     require_once '../views/error404.php';
 }
 require_once '../templates/footer.php';
