@@ -1,8 +1,6 @@
 parei no minuto 18:00 https://www.youtube.com/watch?v=aIQXgNmx_ug&t=31s
 
-
 <?php 
-
 //caso houver um erro no formato da data no fomrulário
 if($_SESSION['mensagem_error_date']):
 ?>
