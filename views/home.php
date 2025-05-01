@@ -1,4 +1,4 @@
-
+<?php require_once("../config/getsqlform.php");?>
     <div class="container mt-4">
     <?php include_once("../public/message.php")?>
         <div class="row">
@@ -20,11 +20,12 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+                                    <?php foreach($users as $user):?>
                                     <tr>
-                                        <td>1</td>
-                                        <td>testes</td>
-                                        <td>teste@gmail.com</td>
-                                        <td>01/01/2010</td>
+                                        <td><?=$user['id']?></td>
+                                        <td><?=$user['nome']?></td>
+                                        <td><?=$user['email']?></td>
+                                        <td><?=$user['data_nascimento']?></td>
                                         <td>
                                             <a class=" btn btn-secondary btn-sm" href="#">Visualizar</a>
                                             <a class=" btn btn-success btn-sm" href="#">Editar</a>
@@ -33,6 +34,10 @@
                                             </form>
                                         </td>
                                     </tr>
+                                    <?php endforeach;?>
+                                    <?php if($notUserMessage == true):?>
+                                    <?php return $notUserMessage?>
+                                    <?php endif;?>    
                                 </tbody>
                             </table>
                         </div>
