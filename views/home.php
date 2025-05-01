@@ -25,7 +25,7 @@
                                         <td><?=$user['id']?></td>
                                         <td><?=$user['nome']?></td>
                                         <td><?=$user['email']?></td>
-                                        <td><?=$user['data_nascimento']?></td>
+                                        <td><?=date('d/m/Y', strtotime($user['data_nascimento']))?></td>
                                         <td>
                                             <a class=" btn btn-secondary btn-sm" href="#">Visualizar</a>
                                             <a class=" btn btn-success btn-sm" href="#">Editar</a>
