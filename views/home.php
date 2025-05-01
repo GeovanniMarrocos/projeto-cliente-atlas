@@ -27,7 +27,7 @@
                                         <td><?=$user['email']?></td>
                                         <td><?=date('d/m/Y', strtotime($user['data_nascimento']))?></td>
                                         <td>
-                                            <a class=" btn btn-secondary btn-sm" href="#">Visualizar</a>
+                                            <a class=" btn btn-secondary btn-sm" href="viewuser?id=<?=$user['id']?>">Visualizar</a>
                                             <a class=" btn btn-success btn-sm" href="#">Editar</a>
                                             <form action="" method="post" class=" d-inline">
                                                 <button class=" btn btn-danger btn-sm" type="submit" name="delete_usuario" value="1">Excluir</button>
