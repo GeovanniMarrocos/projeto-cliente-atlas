@@ -5,6 +5,7 @@ class Router
     private $routes = [
         '' => 'home',
         '/' => 'home',
+        '/viewuser' => 'viewuser',
         '/index.php' => 'home',
         '/home' => 'home',
         '/create' => 'create',

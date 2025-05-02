@@ -10,15 +10,16 @@ $router = new Router();
 $route = $router->getCurrentRoute();
 
 // Definir o arquivo de view baseado na rota
-$viewFile = match($route) {
+$viewFile = match($route) 
+{
     '' => '../views/home.php',
     '/' => '../views/home.php',
     'home' => '../views/home.php',
+    'viewuser' => '../views/viewuser.php',
     'create' => '../views/createuser.php',
     '404' => '../views/error404.php',
     default => '../views/error404.php'
 };
-
 
 // Renderizar a página
 require_once '../templates/navbar.php';
