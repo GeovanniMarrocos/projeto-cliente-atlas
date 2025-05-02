@@ -9,10 +9,11 @@
                     </h4>
                 </div>
                 <div class="card-body">
+                    <?php include_once("../config/getsqlviewuser.php");?>
                     <div class="mb-3">
                         <label>Nome</label>
                         <p class=" form-control">
-                            <?php echo $userInfo['name'];?>
+                            <?php echo $userInfo['nome'];?>
                         </p>
                     </div>
                     <div class="mb-3">

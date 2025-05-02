@@ -9,14 +9,12 @@ if(isset($_GET['id']))
 
     if(mysqli_num_rows($query) > 0)
     {
-        $userInfo = mysqli_fetch_array($query);
-        
+        $userInfo = mysqli_fetch_array($query);    
     }
     else
     {
         die("Usuário não Encontrado.");
     }
-    exit;
 }
 
 ?>
