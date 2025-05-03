@@ -5,7 +5,7 @@
         <div class=" col-md-12">
             <div class="card">
                 <div class=" card-header">
-                    <h4>Usuário
+                    <h4>Visualizar Usuários
                         <a href="home" class=" btn btn-danger float-end">Voltar</a>
                     </h4>
                 </div>
@@ -14,7 +14,7 @@
                     <div class="mb-3">
                         <label>Nome</label>
                         <p class=" form-control">
-                            <?php echo $userInfo['nome'];?>
+                            <?php echo  $userInfo['nome'];?>
                         </p>
                     </div>
                     <div class="mb-3">
@@ -26,7 +26,7 @@
                     <div class="mb-3">
                         <label>Data de Nascimento</label>
                         <p class=" form-control">
-                            <?php echo $userInfo['data_nascimento'];?>
+                            <?php echo date('d/m/Y', strtotime($userInfo['data_nascimento']));?>
                         </p>
                     </div>
                 </div>
