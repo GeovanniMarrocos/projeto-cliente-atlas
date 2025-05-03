@@ -1,5 +1,9 @@
 
 <?php require_once("../config/getsqlviewuser.php");?>
+<?php if($notUserViewMessage == true){
+    return $notUserViewMessage;
+}    
+?>
 <div class="container g-3">
     <div class="row">
         <div class=" col-md-12">

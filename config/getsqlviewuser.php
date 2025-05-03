@@ -1,5 +1,6 @@
 <?php
 require_once("../config/database.php");
+$notUserViewMessage;
 
 if(isset($_GET['id'])) 
 {
@@ -13,7 +14,9 @@ if(isset($_GET['id']))
     }
     else
     {
-        die("Usuário não Encontrado.");
+       $notUserViewMessage = '<div class=" alert alert-danger alert-dismissible fade show" role="alert">
+       <h5>Nenhum usuário encontrado</h5><a href="create" class="btn btn-danger float-end"> Adicionar Usuários </a></div>';
+        echo $notUserViewMessage;
     }
 }
 
