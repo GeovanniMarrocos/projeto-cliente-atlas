@@ -15,6 +15,7 @@ $viewFile = match($route)
     '' => '../views/home.php',
     '/' => '../views/home.php',
     'home' => '../views/home.php',
+    'edituser'=> '../views/edituser.php',
     'viewuser' => '../views/viewuser.php',
     'create' => '../views/createuser.php',
     '404' => '../views/error404.php',
