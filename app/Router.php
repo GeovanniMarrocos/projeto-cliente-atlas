@@ -6,6 +6,7 @@ class Router
         '' => 'home',
         '/' => 'home',
         '/viewuser' => 'viewuser',
+        '/edituser' => 'edituser',
         '/index.php' => 'home',
         '/home' => 'home',
         '/create' => 'create',
