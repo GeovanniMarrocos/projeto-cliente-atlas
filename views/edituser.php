@@ -1,3 +1,5 @@
+<?php session_start();?>
+<?php require_once("../config/getsqledit.php")?>
 <div class="container g-3">
     <div class="row">
         <div class=" col-md-12">
@@ -11,20 +13,19 @@
                     <form action="action.php" method="GET">
                         <div class="mb-3">
                             <label>Nome</label>
-                            <input class="form-control"type="text" name="nome" required>
+                            <input class="form-control"type="text" name="nome" value="<?php echo $userEdit['nome'];?>" required>
                         </div>
                         <div class="mb-3">
                             <label>Email</label>
-                            <input class="form-control"type="text" name="email" required>
+                            <input class="form-control"type="text" name="email" value="<?php echo $userEdit['email'];?>" required>
                         </div>
                         <div class="mb-3">
-                        <?php include_once("../public/message.php")?>
                             <label>Data de Nascimento</label>
-                            <input class="form-control"type="date" name="data_nascimento" required>
+                            <input class="form-control"type="date" name="data_nascimento" value="<?php echo $userEdit['data_nascimento'];?>" required>
                         </div>
                         <div class="mb-3">
                             <label>Senha</label>
-                            <input class="form-control" type="password" name="senha" required>
+                            <input class="form-control" type="password" name="senha" value="<?php echo $userEdit['password'];?>" required>
                         </div>
                         <div class="mb-3">
                             <button class="btn btn-primary" type="submit" name="createuser">Salvar</button>
