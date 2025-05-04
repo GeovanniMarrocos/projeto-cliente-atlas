@@ -10,7 +10,8 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <form action="action.php" method="GET">
+                    <form action="action.php" method="POST">
+                        <input type="hidden" name="userID" value="<?php echo $userEdit['id'];?>">
                         <div class="mb-3">
                             <label>Nome</label>
                             <input class="form-control"type="text" name="nome" value="<?php echo $userEdit['nome'];?>" required>
@@ -25,10 +26,10 @@
                         </div>
                         <div class="mb-3">
                             <label>Senha</label>
-                            <input class="form-control" type="password" name="senha" value="<?php echo $userEdit['password'];?>" required>
+                            <input class="form-control" type="password" name="senha" value="<?php echo $userEdit['password'];?>">
                         </div>
                         <div class="mb-3">
-                            <button class="btn btn-primary" type="submit" name="createuser">Salvar</button>
+                            <button class="btn btn-primary" type="submit" name="update">Salvar</button>
                         </div>
                     </form>
                 </div>

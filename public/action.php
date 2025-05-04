@@ -25,13 +25,52 @@ if (isset($_POST['createuser']))
         $firstName = $nameParts[0];    
         
 
-        $_SESSION['mensagem'] = "Usuário: <strong> {$firstName}: </strong> criado com sucesso!";
+        $_SESSION['mensagem'] = "Usuário: <strong> {$firstName} </strong> criado com sucesso!";
         header("Location: index.php");
         exit;
     }
     else 
     {
         $_SESSION['mensagem'] = "Não foi possivél criar o usuário";
+        header("Location: index.php");
+        exit;
+    }
+}
+
+//Lógica para editar dados dentro do banco de dados
+if (isset($_POST['update']))  
+{
+    $userID = mysqli_real_escape_string($connection, ($_POST['id']));
+    
+
+    $name = mysqli_real_escape_string($connection, trim($_POST['nome']));
+    $email = mysqli_real_escape_string($connection, trim($_POST['email']));
+    $birth_date = mysqli_real_escape_string($connection, trim($_POST['data_nascimento']));
+    $password = isset($_POST['senha']) ? mysqli_real_escape_string($connection, password_hash(trim($_POST['senha']), PASSWORD_DEFAULT)) :'';
+    
+    $sql = "UPDATE usuarios SET nome = '$name', email = '$email', data_nascimento = '$birth_date'";
+
+    if(empty($password))
+    {
+        $sql .= ", senha='" . password_hash($password, PASSWORD_DEFAULT) . "'";
+    }
+ 
+    mysqli_query($connection, $sql);
+
+    if (mysqli_affected_rows($connection) > 0) 
+    {
+
+        $nameParts = explode(' ',$name);
+        $firstName = $nameParts[0];    
+        
+
+        $_SESSION['mensagem'] = "Usuário: <strong> {$firstName} </strong> Atualizado com sucesso!";
+        header("Location: index.php");
+        exit;
+    }
+    else 
+    {
+        $_SESSION['mensagem'] = "Não foi possivél atualizar os dados do usuário";
         header("Location: index.php");
         exit;
     }
