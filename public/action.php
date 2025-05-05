@@ -3,7 +3,7 @@
 
 session_start();
 require_once("../vendor/autoload.php");
-require_once("../config/database.php");
+require_once("../models/database.php");
 
 
 //Lógica e tratamento de erros do banco de dados

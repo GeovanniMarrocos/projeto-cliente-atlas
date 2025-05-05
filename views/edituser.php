@@ -1,5 +1,5 @@
 <?php session_start();?>
-<?php require_once("../config/getsqledit.php")?>
+<?php require_once("../models/getsqledit.php")?>
 <div class="container g-3">
     <div class="row">
         <div class=" col-md-12">

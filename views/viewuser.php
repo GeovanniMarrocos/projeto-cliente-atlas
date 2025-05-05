@@ -1,5 +1,5 @@
 
-<?php require_once("../config/getsqlviewuser.php");?>
+<?php require_once("../models/getsqlviewuser.php");?>
 <?php if($notUserViewMessage == true){
     return $notUserViewMessage;
 }    
@@ -14,7 +14,7 @@
                     </h4>
                 </div>
                 <div class="card-body">
-                    <?php include_once("../config/getsqlviewuser.php");?>
+                    <?php include_once("../models/getsqlviewuser.php");?>
                     <div class="mb-3">
                         <label>Nome</label>
                         <p class=" form-control">
