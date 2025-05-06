@@ -2,6 +2,7 @@
 
 
 session_start();
+require_once("../models/getsqledit.php");
 require_once("../vendor/autoload.php");
 require_once("../models/database.php");
 
@@ -40,13 +41,13 @@ if (isset($_POST['createuser']))
 //Lógica para editar dados dentro do banco de dados
 if (isset($_POST['update']))  
 {
-    $userId = mysqli_real_escape_string($connection, ($_POST['id']));
+    $userId = mysqli_real_escape_string($connection, $_POST['userId']);
     
 
     $name = mysqli_real_escape_string($connection, trim($_POST['nome']));
     $email = mysqli_real_escape_string($connection, trim($_POST['email']));
     $birth_date = mysqli_real_escape_string($connection, trim($_POST['data_nascimento']));
-    $password = isset($_POST['senha']) ? mysqli_real_escape_string($connection, password_hash(trim($_POST['senha']), PASSWORD_DEFAULT)) :'';
+    $password = mysqli_real_escape_string($connection, trim($_POST['password']));
     
     $sql = "UPDATE usuarios SET nome = '$name', email = '$email', data_nascimento = '$birth_date'";
 
@@ -54,7 +55,9 @@ if (isset($_POST['update']))
     {
         $sql .= ", senha='" . password_hash($password, PASSWORD_DEFAULT) . "'";
     }
- 
+    
+    $sql .= " WHERE id = '$userId'";
+
     mysqli_query($connection, $sql);
 
     if (mysqli_affected_rows($connection) > 0) 

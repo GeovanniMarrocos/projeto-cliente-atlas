@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 require_once("../models/database.php");
 require_once("../models/getsqledit.php");
 ?>
@@ -13,22 +13,22 @@ require_once("../models/getsqledit.php");
                 </div>
                 <div class="card-body">
                     <form action="action.php" method="POST">
-                        <input type="hidden" name="userID" value="<?php echo $userEdit['id'];?>">
+                        <input type="hidden" name="userId" value="<?php echo $user['id'];?>">
                         <div class="mb-3">
                             <label>Nome</label>
-                            <input class="form-control"type="text" name="nome" value="<?php echo $userEdit['nome'];?>" required>
+                            <input class="form-control"type="text" name="nome" value="<?php echo $user['nome'];?>" required>
                         </div>
                         <div class="mb-3">
                             <label>Email</label>
-                            <input class="form-control"type="text" name="email" value="<?php echo $userEdit['email'];?>" required>
+                            <input class="form-control"type="text" name="email" value="<?php echo $user['email'];?>" required>
                         </div>
                         <div class="mb-3">
                             <label>Data de Nascimento</label>
-                            <input class="form-control"type="date" name="data_nascimento" value="<?php echo $userEdit['data_nascimento'];?>" required>
+                            <input class="form-control"type="date" name="data_nascimento" value="<?php echo $user['data_nascimento'];?>" required>
                         </div>
                         <div class="mb-3">
                             <label>Senha</label>
-                            <input class="form-control" type="password" name="senha" value="<?php echo $userEdit['password'];?>">
+                            <input class="form-control" type="password" name="senha" value="">
                         </div>
                         <div class="mb-3">
                             <button class="btn btn-primary" type="submit" name="update">Salvar</button>
