@@ -34,10 +34,7 @@
                                             </form>
                                         </td>
                                     </tr>
-                                    <?php endforeach;?>
-                                    <?php if($notUserMessage == true):?>
-                                    <?php return $notUserMessage?>
-                                    <?php endif;?>    
+                                    <?php endforeach;?>   
                                 </tbody>
                             </table>
                         </div>
