@@ -65,13 +65,13 @@ if (isset($_POST['update']))
         
 
         $_SESSION['mensagem'] = "Usuário: <strong> {$firstName} </strong> Atualizado com sucesso!";
-        header("Location: index.php");
+        header("Location: home");
         exit;
     }
     else 
     {
         $_SESSION['mensagem'] = "Não foi possivél atualizar os dados do usuário";
-        header("Location: index.php");
+        header("Location: home");
         exit;
     }
 }
