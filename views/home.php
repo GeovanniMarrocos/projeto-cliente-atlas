@@ -6,7 +6,7 @@
                 <div class=" card">
                     <div class="card-header">
                         <h4>Lista de Usuários
-                            <a href="create" class="btn btn-primary float-end"> Adicionar Usuários </a>
+                            <a href="create"  class="btn btn-primary float-end"> <span class=" bi-person-plus-fill"></span>&nbsp; Adicionar Usuários</a>
                         </h4>
                         <div class="card-body">
                             <table class=" table table-bordered table-striped">
@@ -27,11 +27,11 @@
                                         <td><?=$user['email']?></td>
                                         <td><?=date('d/m/Y', strtotime($user['data_nascimento']))?></td>
                                         <td>
-                                            <a class=" btn btn-secondary btn-sm" href="viewuser?id=<?=$user['id']?>">Visualizar</a>
-                                            <a class=" btn btn-success btn-sm" href="edituser?id=<?=$user['id']?>">Editar</a>
+                                            <a class=" btn btn-secondary btn-sm" href="viewuser?id=<?=$user['id']?>"><span class=" bi-eye-fill"></span>&nbsp;Visualizar</a>
+                                            <a class=" btn btn-success btn-sm" href="edituser?id=<?=$user['id']?>"><span class=" bi-pencil-fill"></span>&nbsp;Editar</a>
                                             <form action="/action.php" method="post" class=" d-inline">
                                                 <button onclick="return confirm('Tem certeza que deseja excluir o Usuário:<?php echo $user['nome']?>')" 
-                                                class=" btn btn-danger btn-sm" type="submit" name="delete_user" value="<?php echo $user['id']?>">Excluir</button>
+                                                class=" btn btn-danger btn-sm" type="submit" name="delete_user" value="<?php echo $user['id']?>"><span class=" bi-trash3-fill"></span>&nbsp;Excluir</a></button>
                                             </form>
                                         </td>
                                     </tr>

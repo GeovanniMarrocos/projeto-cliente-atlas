@@ -9,6 +9,3 @@
     unset($_SESSION['mensagem']);
     endif;
 ?>
-<?php 
-    
-?>
