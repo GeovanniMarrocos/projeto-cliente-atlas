@@ -40,7 +40,7 @@ if (isset($_POST['createuser']))
 //Lógica para editar dados dentro do banco de dados
 if (isset($_POST['update']))  
 {
-    $userID = mysqli_real_escape_string($connection, ($_POST['id']));
+    $userId = mysqli_real_escape_string($connection, ($_POST['id']));
     
 
     $name = mysqli_real_escape_string($connection, trim($_POST['nome']));
@@ -73,5 +73,25 @@ if (isset($_POST['update']))
         $_SESSION['mensagem'] = "Não foi possivél atualizar os dados do usuário";
         header("Location: index.php");
         exit;
+    }
+}
+
+if(isset($_POST['delete_user']))
+{
+    $userId = mysqli_real_escape_string($connection, $_POST['delete_user']);
+    
+    $sql = "DELETE FROM usuarios WHERE id = '$userId'";
+
+    mysqli_query($connection, $sql);
+
+    if (mysqli_affected_rows($connection) > 0)
+    {
+       $_SESSION['mensagem'] = "Usuário foi excluído com sucesso"; 
+       header("Location: index.php");
+    }
+    else
+    {
+        $_SESSION['mensagem'] = "Usuário não foi deletado";
+        header("Location: index.php"); 
     }
 }
