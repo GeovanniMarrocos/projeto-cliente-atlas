@@ -30,7 +30,8 @@
                                             <a class=" btn btn-secondary btn-sm" href="viewuser?id=<?=$user['id']?>">Visualizar</a>
                                             <a class=" btn btn-success btn-sm" href="edituser?id=<?=$user['id']?>">Editar</a>
                                             <form action="/action.php" method="post" class=" d-inline">
-                                                <button class=" btn btn-danger btn-sm" type="submit" name="delete_user" value="<?php echo $user['id']?>">Excluir</button>
+                                                <button onclick="return confirm('Tem certeza que deseja excluir o Usuário:<?php echo $user['nome']?>')" 
+                                                class=" btn btn-danger btn-sm" type="submit" name="delete_user" value="<?php echo $user['id']?>">Excluir</button>
                                             </form>
                                         </td>
                                     </tr>

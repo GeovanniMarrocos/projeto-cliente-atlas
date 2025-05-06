@@ -9,11 +9,5 @@ if(mysqli_num_rows($query)> 0)
 {
     $userEdit = mysqli_fetch_array($query);
 
-
-}else
-{
-       $notUserEditMessage = '<div class=" alert alert-danger alert-dismissible fade show" role="alert">
-       <h5>Nenhum usuário encontrado</h5><a href="create" class="btn btn-danger float-end"> Adicionar Usuários </a></div>';
-       echo $notUserEditMessage;
 }
 ?>

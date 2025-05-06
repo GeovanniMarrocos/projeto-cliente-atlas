@@ -76,6 +76,7 @@ if (isset($_POST['update']))
     }
 }
 
+//Lógica para exclusão de dados no banco;
 if(isset($_POST['delete_user']))
 {
     $userId = mysqli_real_escape_string($connection, $_POST['delete_user']);

@@ -12,14 +12,6 @@ if(isset($_GET['id']))
     {
         $userInfo = mysqli_fetch_array($query);    
     }
-    else
-    {
-       $notUserViewMessage = 
-       '<div class=" alert alert-danger alert-dismissible fade show" role="alert">
-       <h5>Nenhum usuário encontrado</h5> <a href="create" class="btn btn-danger float-end mb-3"> Adicionar Usuários </a>
-       </div>';
-        echo $notUserViewMessage;
-    }
 }
 
 ?>
